@@ -1,0 +1,38 @@
+<div class="grid grid-cols-12  h-dvh w-full ">
+  <div class="col-span-1 bg-emerald-600 w-5/6 rounded-2xl m-auto">
+    <div class="my-3 grid grid-rows-10 h-full">
+      <div class="row-span-1">
+
+          <div role="button" class=" place-items-center">
+            <img src="profile.png" class="border rounded-full p-2 border-e-sky-100" width="60px" alt="">
+          </div>
+
+      </div>
+
+      <div class="row-span-8 self-center">
+
+        <div role="button" routerLink="/main/chat" class="rounded-2xl py-3 hover:animate-pulse hover:bg-emerald-500 hover:text-white text-center">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>
+        </div>
+
+        <div role="button" routerLink="/main/profile" class="rounded-2xl py-3 hover:animate-pulse hover:bg-emerald-500 hover:text-white text-center">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="groups"></mat-icon>
+        </div>
+
+        <div role="button" routerLink="/main/setting" class="rounded-2xl py-3 hover:animate-pulse hover:bg-emerald-500 hover:text-white text-center">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="manage_accounts"></mat-icon>
+        </div>
+
+      </div>
+
+      <div class="row-span-1">
+        <div role="button" class="rounded-2xl py-3 hover:animate-pulse hover:bg-emerald-500 hover:text-white text-center">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <div class="col-span-3 bg-emerald-700 rounded-2xl my-2 w-11/12 m-auto"><router-outlet></router-outlet></div>
+  <div class="col-span-8 bg-emerald-800 rounded-2xl my-1 w-11/12 m-auto">c</div>
+</div>
