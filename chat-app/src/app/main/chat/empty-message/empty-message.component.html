@@ -5,26 +5,41 @@
       <p class="text-sm text-white">Receiver Name</p>
     </div>
     <div class="items-center text-white cursor-pointer">
-      <mat-icon fontIcon="more_vert"></mat-icon>
+      <mat-icon mat-button [matMenuTriggerFor]="menu" fontIcon="more_vert"></mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
     </div>
   </div>
 
-  <div class="flex justify-between bg-green-950 p-3 rounded-md items-center h-4/5 my-1">
-    <div class="flex gap-1 items-center">
-      <img src="profile.png" width="40px" class="rounded-full border " alt="">
-      <p class="text-sm text-white">Receiver Name</p>
+  <div class=" bg-green-950 p-3 rounded-md items-center h-4/5 my-1">
+    <div class="text-white bg-green-100 bg-opacity-50 p-2 my-1 rounded-md float-end">
+      <span >message message message message message message message message message message
+      </span>
+      <span class="text-xs me-1 mt-2">12:00</span>
     </div>
-    <div class="items-center text-white">
-      <mat-icon fontIcon="list"></mat-icon>
+    <div class="text-white bg-green-700 p-2 my-1 rounded-md float-start">
+      <span >
+       message message message message message message
+      </span>
+      <span class="text-xs me-1 mt-2">12:00</span>
     </div>
   </div>
 
   <div class="flex justify-evenly bg-green-950 p-3 rounded-md items-center">
     <div class="items-center text-white">
-      <mat-icon fontIcon="add"></mat-icon>
+      <input
+    #fileInput
+    type="file"
+    class="hidden"
+    (change)="onFileSelected($event)"
+  />
+      <mat-icon fontIcon="attach_file" role="button" (click)="fileInput.click()"></mat-icon>
+
     </div>
     <div class="flex gap-1 items-center w-10/12">
-      <input class="w-full py-2 rounded-md px-2" type="text">
+      <input class="w-full py-2 rounded-md px-2 dark:bg-white" type="text">
     </div>
     <div class="items-center text-white">
       <mat-icon fontIcon="send" class="me-2"></mat-icon>
