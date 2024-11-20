@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-setting',
+  standalone:true,
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.css']
 })

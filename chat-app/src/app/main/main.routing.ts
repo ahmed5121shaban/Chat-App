@@ -1,10 +1,24 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SettingComponent } from './setting/setting.component';
 
-const routes: Routes = [
-  /* {path:'chat',component:ChatComponent},
-  {path:'profile',component:ProfileComponent}, */
+export const MainRoutes: Routes = [
+  {
+    path: '',
+    component:ChatComponent,
+    loadChildren: () => import('./chat/chat.routing').then(m => m.ChatRoutes)
+  },
+  {
+    path: 'profile',
+    component:ProfileComponent,
+    loadChildren: () => import('./profile/profile.routing').then(m => m.ProfileRoutes)
+  },
+  {
+    path: 'setting',
+    component:SettingComponent,
+    loadChildren: () => import('./setting/setting.routing').then(m => m.SettingRoutes)
+  },
+
 ];
 
-export const MainRoutes = RouterModule.forChild(routes);
