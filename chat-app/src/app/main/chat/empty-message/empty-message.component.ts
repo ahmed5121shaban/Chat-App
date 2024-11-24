@@ -5,23 +5,17 @@ import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   standalone:true,
-  imports:[MatIconModule,MatButtonModule, MatMenuModule],
+  imports:[],
   selector: 'app-empty-message',
   templateUrl: './empty-message.component.html',
   styleUrls: ['./empty-message.component.css']
 })
 export class EmptyMessageComponent implements OnInit {
-  private selectedFileName: string = '';
   constructor() { }
 
   ngOnInit() {
   }
 
-  onFileSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.selectedFileName = input.files[0].name; // Update the file name
-    }
-  }
+
 
 }

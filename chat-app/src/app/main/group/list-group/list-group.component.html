@@ -1,0 +1,39 @@
+<div class="p-3 h-full">
+  <div class=" rounded-md h-full grid grid-rows-12">
+    <div class="row-span-2 w-10/12 relative m-auto pt-4">
+      <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5 pt-2">
+        <svg class="shrink-0 size-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </div>
+      <input class="py-3 ps-10 pe-4 block w-full dark:bg-white dark:text-black border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" type="text" role="combobox" aria-expanded="false" placeholder="Search ..." value="" data-hs-combo-box-input="">
+    </div>
+
+    <div class="row-span-8 grid grid-cols-12 gap-1">
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+        <div class="col-span-4 rounded-md bg-slate-500">d</div>
+    </div>
+
+    <div class="row-span-2">
+      <mat-paginator #paginator
+        class=" max-w-fit m-auto rounded-md mt-10"
+        (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [disabled]="disabled"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [hidePageSize]="hidePageSize"
+        [pageIndex]="pageIndex"
+        aria-label="Select page">
+      </mat-paginator>
+    </div>
+  </div>
+</div>
