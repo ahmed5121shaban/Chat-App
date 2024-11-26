@@ -1,7 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import { SettingComponent } from './setting.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 export const SettingRoutes: Routes = [
-  { path:'',component:SettingComponent },
+  { path:'edit-profile',component:EditProfileComponent },
 ];
 
