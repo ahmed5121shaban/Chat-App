@@ -1,5 +1,5 @@
 
-<div class="p-3 h-full content-center">
+<!-- <div class="p-3 h-full content-center">
   <form class="grid grid-cols-12 gap-3">
     <div class="col-span-6">
       <p-floatLabel>
@@ -34,4 +34,51 @@
   </div>
   </form>
 
+</div>
+ -->
+<div class="p-3 h-full content-center">
+  <form action="" class="flex flex-wrap gap-4 p-3">
+  <div class="w-11/12 flex items-end gap-5 p-2 justify-center">
+    <div class="shrink-0">
+      <img class="h-52 w-52 object-cover rounded-full" src="https://picsum.photos/id/1/500" alt="Current profile photo" />
+    </div>
+    <label class="block mb-3">
+      <span class="sr-only">Choose profile photo</span>
+      <input type="file" class="block w-full text-sm text-green-950 font-semibold
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-violet-50 file:text-green-950
+        hover:file:bg-violet-100
+      "/>
+    </label>
+  </div>
+  <div class="flex flex-col" style="width: 48%;">
+    <label for="fName" class="text-white">First Name: </label>
+    <input type="text" name="fName" id="fName" class="rounded-md p-2">
+  </div>
+  <div class="w-6/12 flex flex-col" style="width: 48%;">
+    <label for="lName" class="text-white">Last Name: </label>
+    <input type="text" name="lName" id="lName" class="rounded-md p-2">
+  </div>
+  <div class="w-7/12 flex flex-col">
+    <label for="email" class="text-white">Email: </label>
+    <input type="email" name="email" id="email" class="rounded-md p-2">
+  </div>
+  <div class="flex flex-col w-5/12" style="width: 48%;">
+    <label for="country" class="text-white" >Country: </label>
+    <input type="text" name="country" id="country" class="rounded-md p-2">
+  </div>
+  <div class="flex flex-col w-5/12" style="width: 48%;">
+    <label for="city" class="text-white">City: </label>
+    <input type="text" name="city" id="city" class="rounded-md p-2">
+  </div>
+  <div class="flex flex-col w-7/12">
+    <label for="pNumber" class="text-white">Phone Number: </label>
+    <input type="number" name="pNumber" id="pNumber" class="rounded-md p-2">
+  </div>
+  <div class="flex flex-col content-center w-6/12">
+    <button class="w-4/12 rounded-full p-3 bg-green-950 text-white">Save</button>
+  </div>
+</form>
 </div>
