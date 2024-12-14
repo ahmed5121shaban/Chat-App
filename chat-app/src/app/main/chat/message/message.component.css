@@ -1,0 +1,7 @@
+.message-setting{
+  visibility: hidden;
+}
+
+.message:hover .message-setting{
+  visibility:visible;
+}
