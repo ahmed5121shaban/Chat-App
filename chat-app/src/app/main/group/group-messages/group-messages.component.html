@@ -1,8 +1,8 @@
-<div class="bg-emerald-800 rounded-2xl p-3 pt-4 h-full  m-auto">
-  <div class="flex justify-between bg-green-950 p-3 rounded-md items-center">
+<div class="bg-teal-800 rounded-2xl p-3 pt-4 h-full  m-auto">
+  <div class="flex justify-between bg-teal-950 p-3 rounded-md items-center">
     <div class="flex gap-1 items-center">
       <img src="profile.png" width="40px" class="rounded-full border " alt="">
-      <p class="text-sm text-white">Receiver Name</p>
+      <p class="text-sm text-white">Group Name</p>
     </div>
     <div class="items-center text-white cursor-pointer">
       <mat-icon mat-button [matMenuTriggerFor]="menu" fontIcon="more_vert"></mat-icon>
@@ -13,21 +13,26 @@
     </div>
   </div>
 
-  <div class=" bg-green-950 p-3 rounded-md items-center h-4/5 my-1">
-    <div class="text-white bg-green-100 bg-opacity-50 p-2 my-1 rounded-md float-end">
+  <div class=" bg-teal-950 p-3 rounded-md items-center h-4/5 my-1">
+    <div class="message text-white bg-gray-100 bg-opacity-50 p-2 my-1 rounded-md float-end flex items-center">
+      <mat-icon fontIcon="arrow_downward" mat-button [matMenuTriggerFor]="messageMenu" role="button" class="text-base message-setting" ></mat-icon>
       <span >message message message message message message message message message message
       </span>
-      <span class="text-xs me-1 mt-2">12:00</span>
+      <span class="text-xs ms-2">12:00</span>
     </div>
-    <div class="text-white bg-green-700 p-2 my-1 rounded-md float-start">
+    <div class="message text-white bg-teal-700 p-2 my-1 rounded-md float-start flex items-center">
+      <mat-icon fontIcon="arrow_downward" mat-button [matMenuTriggerFor]="messageMenu" role="button" class="text-base message-setting" ></mat-icon>
       <span >
        message message message message message message
       </span>
-      <span class="text-xs me-1 mt-2">12:00</span>
+      <span class="text-xs ms-1">12:00</span>
     </div>
+    <mat-menu #messageMenu="matMenu">
+      <button mat-menu-item>Delete</button>
+    </mat-menu>
   </div>
 
-  <form class="flex justify-evenly bg-green-950 p-3 rounded-md items-center">
+  <form class="flex justify-evenly bg-teal-950 p-3 rounded-md items-center">
     <div class="items-center text-white">
       <input
     #fileInput

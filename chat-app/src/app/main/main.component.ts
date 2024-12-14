@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   readonly dialog = inject(MatDialog);
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+    const dialogRef = this.dialog.open(DialogContent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -37,4 +37,4 @@ export class MainComponent implements OnInit {
   templateUrl: './logout-dialog.html',
   imports: [MatDialogModule, MatButtonModule],
 })
-export class DialogContentExampleDialog {}
+export class DialogContent {}
