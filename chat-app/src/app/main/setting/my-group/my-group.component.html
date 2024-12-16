@@ -1,0 +1,90 @@
+<div class="p-3">
+
+  <div class="">
+    <div class="bg-teal-950 w-full p-2 rounded-md text-white">
+      <button class="p-2 px-3 hover:bg-teal-800 rounded-md">Create New Group</button>
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <div class="bg-teal-950 w-full p-4 px-3 rounded-md text-white">
+      <div class="">All Group</div>
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <div class="bg-teal-950 w-full p-2 rounded-md text-white">
+      <div class="p-2 px-3 rounded-md">
+
+        <div class="relative flex items-center">
+          <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+            <svg class="shrink-0 size-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </div>
+          <input class="py-3 ps-10 pe-4 me-3 block w-full dark:bg-white dark:text-black border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" type="text" role="combobox" aria-expanded="false" placeholder="Search ..." value="" data-hs-combo-box-input="">
+          <mat-icon fontIcon="filter_alt" [mat-menu-trigger-for]="menu" class="cursor-pointer"></mat-icon>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Date</button>
+            <button mat-menu-item>Count</button>
+          </mat-menu>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="mt-2" >
+    <div class="bg-teal-950 w-full p-3 rounded-md text-white" >
+
+    <div class="grid grid-cols-12 bg-teal-800 py-3 px-2 rounded-md gap-1" style="height: 48vh;">
+
+      <div class="col-span-4 rounded-md py-2 shadow-lg border border-opacity-20 border-gray-50  px-2 flex flex-wrap flex-col justify-evenly ">
+        <div class="flex flex-wrap">
+          <div><img src="profile.png" class="rounded-full shadow-2xl border border-opacity-20 border-gray-50" width="60px" alt=""></div>
+          <div>
+            <div><p class="text-white mb-1">Group Name</p></div>
+
+            <div>
+              <div class="col-span-12 flex items-center mb-1">
+                <img src="profile.png" width="30px" alt="profile" class="rounded-full shadow-lg border border-opacity-20 border-gray-50">
+                <img src="profile.png" width="30px" alt="profile" class="rounded-full shadow-lg border border-opacity-20 border-gray-50">
+                <img src="profile.png" width="30px" alt="profile" class="rounded-full shadow-lg border border-opacity-20 border-gray-50">
+                <span class="text-white ms-1">...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-end">
+          <button class="p-2 px-5 me-1 bg-teal-950 text-white rounded-md text-sm" >Delete</button>
+          <button class="p-2 bg-teal-950 text-white rounded-md text-sm" >Show Details</button>
+        </div>
+      </div>
+
+
+
+    </div>
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <div class="bg-teal-950 w-full py-2 rounded-md text-white">
+      <mat-paginator #paginator
+        class=" max-w-fit m-auto rounded-md"
+        (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [disabled]="disabled"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [hidePageSize]="hidePageSize"
+        [pageIndex]="pageIndex"
+        aria-label="Select page">
+      </mat-paginator>
+    </div>
+  </div>
+
+</div>
+
+
