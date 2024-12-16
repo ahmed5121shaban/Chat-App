@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   standalone:true,
-  imports:[MatButtonModule,MatIconModule,MatMenuModule,MatPaginatorModule],
+  imports:[MatButtonModule,MatIconModule,MatMenuModule,MatPaginatorModule,MatDialogModule],
   selector: 'app-my-group',
   templateUrl: './my-group.component.html',
   styleUrls: ['./my-group.component.css']
 })
 export class MyGroupComponent implements OnInit {
+  readonly dialog = inject(MatDialog);
 
   constructor() { }
 
@@ -43,23 +45,36 @@ export class MyGroupComponent implements OnInit {
     }
   }
 
+  openDetailDialog() {
+    const dialogRef = this.dialog.open(GroupDetailDialog);
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openDeleteDialog() {
+    const dialogRef = this.dialog.open(DeleteDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
 
 }
 
 @Component({
   standalone:true,
-  imports:[],
-  template:'./delete-dialog.html',
+  imports:[MatDialogModule, MatButtonModule],
+  templateUrl:'./delete-dialog.html',
   styles:''
 })
 export class DeleteDialog{}
 
 @Component({
   standalone:true,
-  imports:[],
-  template:'./group-detail-dialog.html',
+  imports:[MatDialogModule, MatButtonModule],
+  templateUrl:'./group-detail-dialog.html',
   styles:''
 })
 export class GroupDetailDialog{}
