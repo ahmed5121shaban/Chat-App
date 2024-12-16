@@ -60,6 +60,14 @@ export class MyGroupComponent implements OnInit {
     });
   }
 
+  openCreateGroupDialog() {
+    const dialogRef = this.dialog.open(CreateGroupDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
 
 }
 
@@ -79,3 +87,11 @@ export class DeleteDialog{}
 })
 export class GroupDetailDialog{}
 
+
+@Component({
+  standalone:true,
+  imports:[MatDialogModule, MatButtonModule],
+  templateUrl:'./create-group-dialog.html',
+  styles:''
+})
+export class CreateGroupDialog{}
